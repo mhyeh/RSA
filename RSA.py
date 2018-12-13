@@ -4,9 +4,9 @@ import random
 import prime
 import util
 
-def KeyGenerator(bit = 512):
-    p = prime.PrimeGenerator(bit)
-    q = prime.PrimeGenerator(bit)
+def KeyGenerator(bit = 1024):
+    p = prime.PrimeGenerator(bit // 2)
+    q = prime.PrimeGenerator(bit // 2)
     n = p * q
     phi_n = (p - 1) * (q - 1)
 
