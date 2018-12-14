@@ -28,7 +28,7 @@ def MillerRabinTest(p, k):
         if x == 1 or x == p - 1:
             return False
         for i in range(t - 1):
-            x = util.SQandMU(a, 2 ** i * u, p)
+            x = util.SQandMU(a, (1 << i) * u, p)
             if x == p - 1:
                 return False
         return True

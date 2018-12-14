@@ -1,11 +1,12 @@
-def SQandMU(x, h, n):
+def SQandMU(x, h, n=0):
     b = bin(h).lstrip('0b')
     r = 1
     for i in b:
         r = r ** 2
         if i == '1':
             r *= x
-        r %= n
+        if (n != 0):
+            r %= n
     return r
 
 def EEA(l, r):
